@@ -18,10 +18,12 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 17%;
+    margin-right: 15px;margin-bottom: 44px;
+    margin-left: 20px;
   }
 
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 3px 26px 15px 0 rgba(0,0,0,0.2);
   }
 
   .container {
@@ -30,6 +32,24 @@
 </style>
 </head>
 <body>
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#!/list">WebTechnologies</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Tutorial Library</a></li>
+      <li><a href="#">Coading Ground</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Search</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#!/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#!/home"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
 
   <div ng-controller="bookListController">
     <div class="input-group ">
@@ -44,11 +64,14 @@
 
 <br/><br/>
 
-    <div class="card col-md-3 wow zoomIn" data-wow-delay="0.5s" ng-repeat="x in list  | filter: {title:searchStr}" style="margin-right: 44px;margin-bottom: 44px;">
+    <div class="card col-md-3 wow fadeInDown" data-wow-delay="0.5s" ng-repeat="x in list  | filter: {title:searchStr}">
         <img src="{{x.img}}" alt="Avatar" style="width:100%">
         <div class="container text-center" style="display: inline;">
           <h4><b>{{x.title}}</b></h4>
           <p>{{x.Description}}</p>
+          <div class="text-center">
+            <a href="{{x.anchor}}"> <button type="button" class="btn btn-success"> Enter </button></a>
+          </div>
         </div>
     </div>
   </div>

@@ -21,6 +21,19 @@
         templateUrl: '../template/kart.html',
         controller:'kartController'
       })
+      //angular
+      .when('/angular',{
+        templateUrl: '../template/Angularjs/angularhome.html'
+      })
+      .when('/mvc',{
+        templateUrl: '../template/Angularjs/mvc.html'
+      })
+      .when('/dir',{
+        templateUrl: '../template/Angularjs/directives.html'
+      })
+      .when('/fil',{
+        templateUrl: '../template/Angularjs/filter.html'
+      })
       .otherwise('/home');
   }
 

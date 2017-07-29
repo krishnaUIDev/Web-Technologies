@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!--  <link rel="stylesheet" href="./CSS/login.css"/>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover, .offcanvas a:focus{
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()" id="main">&#9776;</span>
+      <a class="navbar-brand" href="#!/list">WebTechnologies</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#!/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#!/home"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="mySidenav" class="sidenav" >
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#!/angular">Angular Home</a>
+  <a href="#!/mvc">Angular MVC</a>
+  <a href="#!/dir">Directives</a>
+  <a href="#!/fil">Filters</a>
+
+</div>
+
+<div class="container">
+
+  <div class="panel panel-danger">
+    <div class="panel-heading text-center">AngularJS - FIlters</div>
+    <div class="panel-body"><p>Filters are used to change modify the data and can be clubbed in expression or directives using pipe character. Following is the list of commonly used filters.
+    </p></div>
+  </div>
+  <div class="panel panel-danger">
+    <div class="panel-heading text-center">filters types</div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>S.NO</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>Uppercase</td>
+          <td>converts a text to upper case text.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Lowercase</td>
+          <td>converts a text to lower case text.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>currency</td>
+          <td>formats text in a currency format.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>filter</td>
+          <td>	filter the array to a subset of it based on provided criteria</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Order By</td>
+          <td>orders the array based on provided criteria..</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="panel panel-danger">
+    <div class="panel-heading text-center">uppercase filter</div>
+    <div class="panel-body">
+      <p>Add uppercase filter to an expression using pipe character. Here we've added uppercase filter to print student name in all capital letters.</p></div>
+  </div>
+
+
+</div>
+
+
+
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+</script>
+
+
+
+
+</body>
+</html>
